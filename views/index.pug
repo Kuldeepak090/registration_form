@@ -1,0 +1,403 @@
+extends layout
+
+block content
+   .container
+      
+      h2.text-center.top-buffer  User Registration 
+      form.form-horizontal(role="form", method="post")
+        .form-group
+          .alert.alert-danger(role='alert', id="msgDiv")
+
+        .form-group
+          label.col-sm-3.control-label(for="firstname") 
+           strong First Name
+          .col-sm-9
+            input#firstname.form-control(type="text" placeholder="First Name" autofocus="" value="")
+
+        .form-group
+          label.col-sm-3.control-label(for="lastname") 
+           strong Last Name
+          .col-sm-9
+            input#lastname.form-control(type="text" placeholder="Last Name" autofocus="" value="")    
+
+
+        .form-group
+          label.col-sm-3.control-label(for="email") 
+           strong Email
+          .col-sm-9
+            input#email.form-control(type="email" placeholder="Email")
+        .form-group
+          label.col-sm-3.control-label(for="password") 
+           strong Password
+          .col-sm-9
+            input#password.form-control(type="password" placeholder="Password")
+        .form-group
+          label.col-sm-3.control-label(for="cpassword") 
+           strong Confirm Password
+          .col-sm-9
+            input#cpassword.form-control(type="password" placeholder="Confirm password")
+        .form-group
+          label.col-sm-9.control-label(for="dob") 
+           strong Date of Birth
+          .col-sm-9
+            input#dob.form-control(type="date")
+        .form-group
+          label.col-sm-3.control-label(for="country") 
+           strong Country
+          .col-sm-9 
+            select#country.form-control
+             option(value='') Please Select
+             
+              option INDIA
+              option USA
+              option United Kingdom	
+              option Germany
+              option Denmark
+              option Ecuador
+              option Canada
+              option France
+              option Others 
+             
+        .form-group
+          label.col-sm-3.control-label(for="state") 
+           strong State
+          .col-sm-9 
+            select#state.form-control
+             option(value='') Please Select
+         
+              option Andhra Pradesh
+              option Arunachal Pradesh
+              option Assam
+              option Bihar
+              option Chhattisgarh
+              option Goa
+              option Gujarat
+              option Haryana
+              option Himachal Pradesh
+              option Jammu and Kashmir 
+              option Jharkhand
+              option Karnataka
+              option Kerala
+              option Madhya Pradesh
+              option Maharashtra
+              option Manipur
+              option Meghalaya
+              option Mizoram 
+              option Nagaland 
+              option Odisha
+              option Punjab 
+              option Rajasthan
+              option Sikkim
+              option Tamil Nadu
+              option Telangana
+              option Tripura
+              option Uttar Pradesh
+              option Uttarakhand
+              option West Bengal
+              option Others
+          .col-sm-9
+        .form-group
+          label.col-sm-3.control-label(for="city") 
+           strong City
+          .col-sm-9 
+           select#city.form-control
+              option(value='') Please Select
+             
+              option Adoni
+              option Amaravati
+              option Anantapur
+              option Chandragiri
+              option Chittoor
+              option Dowlaiswaram
+              option Eluru
+              option Guntur
+              option Kadapa
+              option Kakinada
+              option Kurnool
+              option Machilipatnam
+              option Nagarjunakoṇḍa
+              option Rajahmundry
+              option Srikakulam
+              option Tirupati
+              option Vijayawada
+              option Visakhapatnam
+              option Vizianagaram
+              option Yemmiganur
+              option Arunachal Pradesh
+              option Itanagar
+              option Assam
+              option Dhuburi
+              option Dibrugarh
+              option Dispur
+              option Guwahati
+              option Jorhat
+              option Nagaon
+              option Sivasagar
+              option Silchar
+              option Tezpur
+              option Tinsukia
+              option Bihar
+              option Ara
+              option Barauni
+              option Begusarai
+              option Bettiah
+              option Bhagalpur
+              option Bihar Sharif
+              option Bodh Gaya
+              option Buxar
+              option Chapra
+              option Darbhanga
+              option Dehri
+              option Dinapur Nizamat
+              option Gaya
+              option Hajipur
+              option Jamalpur
+              option Katihar
+              option Madhubani
+              option Motihari
+              option Munger
+              option Muzaffarpur
+              option Patna
+              option Purnia
+              option Pusa
+              option Saharsa
+              option Samastipur
+              option Sasaram
+              option Sitamarhi
+              option Siwan
+              option Chandigarh (union territory)
+              option Chandigarh
+              option Chhattisgarh
+              option Ambikapur
+              option Bhilai
+              option Bilaspur
+              option Dhamtari
+              option Durg
+              option Jagdalpur
+              option Raipur
+              option Rajnandgaon
+              option Dadra and Nagar Haveli and Daman and Diu (union territory)
+              option Daman
+              option Diu
+              option Silvassa
+              option Delhi (national capital territory)
+              option Delhi
+              option New Delhi
+              option Goa
+              option Madgaon
+              option Panaji
+              option Gujarat
+              option Ahmadabad
+              option Amreli
+              option Bharuch
+              option Bhavnagar
+              option Bhuj
+              option Dwarka
+              option Gandhinagar
+              option Godhra
+              option Jamnagar
+              option Junagadh
+              option Kandla
+              option Khambhat
+              option Kheda
+              option Mahesana
+              option Morbi
+              option Nadiad
+              option Navsari
+              option Okha
+              option Palanpur
+              option Patan
+              option Porbandar
+              option Rajkot
+              option Surat
+              option Surendranagar
+              option Valsad
+              option Veraval
+              option Haryana
+              option Ambala
+              option Bhiwani
+              option Chandigarh
+              option Faridabad
+              option Firozpur Jhirka
+              option Gurugram
+              option Hansi
+              option Hisar
+              option Jind
+              option Kaithal
+              option Karnal
+              option Kurukshetra
+              option Panipat
+              option Pehowa
+              option Rewari
+              option Rohtak
+              option Sirsa
+              option Sonipat
+              option Himachal Pradesh
+              option Bilaspur
+              option Chamba
+              option Dalhousie
+              option Dharmshala
+              option Hamirpur
+              option Mandi
+              option Nahan
+              option Shimla
+              option Una
+              option Jammu and Kashmir (union territory)
+              option Anantnag
+              option Baramula
+              option Doda
+              option Gulmarg
+              option Jammu
+              option Kathua
+              option Punch
+              option Rajouri
+              option Srinagar
+              option Udhampur
+              option Jharkhand
+              option Bokaro
+              option Chaibasa
+              option Deoghar
+              option Dhanbad
+              option Dumka
+              option Giridih
+              option Hazaribag
+              option Jamshedpur
+              option Jharia
+              option Rajmahal
+              option Ranchi
+              option Saraikela
+              option Karnataka
+              option Badami
+              option Ballari     
+              option Warangal
+              option Tripura
+              option Agartala
+              option Uttar Pradesh
+              option Agra
+              option Aligarh
+              option Amroha
+              option Ayodhya
+              option Azamgarh
+              option Bahraich
+              option Ballia
+              option Banda
+              option Bara Banki
+              option Bareilly
+              option Basti
+              option Bijnor
+              option Bithur
+              option Budaun
+              option Bulandshahr
+              option Deoria
+              option Etah
+              option Etawah
+              option Faizabad
+              option Farrukhabad-cum-Fatehgarh
+              option Fatehpur
+              option Fatehpur Sikri
+              option Ghaziabad
+              option Ghazipur
+              option Gonda
+              option Gorakhpur
+              option Hamirpur
+              option Hardoi
+              option Hathras
+              option Jalaun
+              option Jaunpur
+              option Jhansi
+              option Kannauj
+              option Kanpur
+              option Lakhimpur
+              option Lalitpur
+              option Lucknow
+              option Mainpuri
+              option Mathura
+              option Meerut
+              option Mirzapur-Vindhyachal
+              option Moradabad
+              option Muzaffarnagar
+              option Partapgarh
+              option Pilibhit
+              option Prayagraj
+              option Rae Bareli
+              option Rampur
+              option Saharanpur
+              option Sambhal
+              option Shahjahanpur
+              option Sitapur
+              option Sultanpur
+              option Tehri
+              option Varanasi
+              option Uttarakhand
+              option Almora
+              option Dehra Dun
+              option Haridwar
+              option Mussoorie
+              option Nainital
+              option Pithoragarh
+              option West Bengal
+              option Alipore
+              option Alipur Duar
+              option Asansol
+              option Baharampur
+              option Bally
+              option Balurghat
+              option Bankura
+              option Baranagar
+              option Barasat
+              option Barrackpore
+              option Basirhat
+              option Bhatpara
+              option Bishnupur
+              option Budge Budge
+              option Burdwan
+              option Chandernagore
+              option Darjeeling
+              option Diamond Harbour
+              option Dum Dum
+              option Durgapur
+              option Halisahar
+              option Haora
+              option Hugli
+              option Ingraj Bazar
+              option Jalpaiguri
+              option Kalimpong
+              option Kamarhati
+              option Kanchrapara
+              option Kharagpur
+              option Cooch Behar
+              option Kolkata
+              option Krishnanagar
+              option Malda
+              option Midnapore
+              option Murshidabad
+              option Nabadwip
+              option Palashi
+              option Panihati
+              option Purulia
+              option Raiganj
+              option Santipur
+              option Shantiniketan
+              option Shrirampur
+              option Siliguri
+              option Siuri
+              option Tamluk
+              option Titagarh
+              option Others        
+        .form-group
+          label.control-label.col-sm-3 
+           strong Gender
+          .col-sm-6
+            .row
+              .col-sm-6
+                label.radio-inline
+                  input#femaleRadio(name="gender" type="radio" value="Female")
+                  | &nbsp;Female
+              .col-sm-4
+                label.radio-inline
+                  input#maleRadio(name="gender" type="radio" value="Male")
+                  | &nbsp;Male              
+        
+        .form-group
+          .col-sm-9.col-sm-offset-3
+            button#register.btn.btn-primary.btn-block(type="e") Register
